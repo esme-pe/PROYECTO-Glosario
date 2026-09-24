@@ -103,9 +103,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Language_overview
 Una constante es un dato que se declara para que su referencia no pueda recibir posteriormente otro valor. Se utiliza cuando queremos que determinada información permanezca igual durante el programa.
 
 **Ejemplo:**
-
+```
 const PI = 3.1416
-
+```
 Fuente:
 MDN Web Docs. (2026). JavaScript language overview. Mozilla.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Language_overview
@@ -117,11 +117,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Language_overview
 El tipo de dato indica qué clase de información representa un valor. Dependiendo del lenguaje, existen diferentes tipos, como números, texto o valores que representan verdadero o falso.
 
 **Ejemplo:**
-
+```
 let edad = 17
 let nombre = "Esmeralda"
 let aprobado = true
-
+```
 Fuente:
 MDN Web Docs. (2026). JavaScript language overview. Mozilla.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Language_overview
@@ -287,53 +287,344 @@ Fuente:
 MDN Web Docs. (2026). Indexed collections. Mozilla.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections
 
-18. Objeto
+---
+
+## 18. Objeto
 
 Un objeto es una estructura que permite reunir diferentes datos relacionados utilizando propiedades. Cada propiedad tiene un nombre y un valor, por lo que resulta útil para representar cosas o elementos con varias características.
 
-Ejemplo:
-
+**Ejemplo:**
+```
 let alumno = {
   nombre: "Esmeralda",
   edad: 17,
   semestre: 6
 };
-
+```
 El objeto alumno reúne información relacionada con una misma persona.
 
 Fuente:
 MDN Web Docs. (2026). Working with objects. Mozilla.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects
+---
 
-19. Método
+## 19. Método
 
 Un método es una función que está asociada a un objeto y que permite realizar una acción relacionada con ese objeto.
 
-Ejemplo:
-
+**Ejemplo:**
+```
 let nombre = "Juanito";
 nombre.toUpperCase();
-
+```
 toUpperCase() es un método que puede utilizarse con una cadena de texto para convertir sus letras a mayúsculas.
 
 Fuente:
 MDN Web Docs. (2026). Working with objects. Mozilla.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects
 
-20. Evento
+---
+
+## 20. Evento
 
 Un evento es una acción o situación que ocurre mientras un programa está funcionando y que puede provocar que se ejecute determinado código. En una página web, puede ser una acción realizada por el usuario o algo que ocurre en el navegador.
 
-Ejemplo:
+**Ejemplo:**
 
 Si tenemos un botón en una página, podemos hacer que al hacer clic sobre él se muestre un mensaje:
-
+```
 boton.addEventListener("click", function() {
   console.log("Hiciste clic");
 });
-
+```
 El clic del usuario es el evento que provoca que se ejecute la función.
 
 Fuente:
 MDN Web Docs. (2026). Introduction to events. Mozilla.
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events
+
+---
+
+# Herramientas para programar
+## 21. Compilador
+
+Es un programa que agarra tu código completo, escrito en un lenguaje como C o Java, y lo traduce de una sola vez a lenguaje de máquina (puros ceros y unos que entiende el procesador). Genera un archivo nuevo, ejecutable, y ya no necesita el código original para correr. Si hay un error de sintaxis en cualquier parte, ni siquiera te deja terminar de compilar, así que te obliga a corregir todo antes de ver resultados.
+
+**Ejemplo:**
+
+Escribes un programa en C, lo compilas con GCC y obtienes un .exe que corre solo, sin que Windows sepa que viene de C.
+
+Fuente:
+Pressman, R. S. (2010). Ingeniería del software: un enfoque práctico. México: McGraw-Hill.
+
+---
+
+## 22. Intérprete
+
+En vez de traducir todo de golpe, va leyendo y ejecutando tu código línea por línea, al momento. No genera un archivo aparte: cada vez que quieres correr el programa, se vuelve a interpretar desde cero. Esto lo hace más lento que un compilado, pero también más flexible para probar cosas rápido.
+
+**Ejemplo:**
+
+Abres la terminal de Python, escribes print("hola") y le das enter, y ahí mismo ves el resultado sin compilar nada.
+
+Fuente:
+Pressman, R. S. (2010). Ingeniería del software: un enfoque práctico. México: McGraw-Hill.
+
+---
+
+## 23. Depurador (debugger)
+
+Es la herramienta que usas cuando tu programa no hace lo que debería y no encuentras por qué. Te deja pausar la ejecución en una línea exacta (un "breakpoint"), y desde ahí revisas qué valor tiene cada variable, ejecutas paso a paso, y vas viendo en qué momento las cosas van mal. Ahorra muchísimo tiempo comparado con solo adivinar.
+
+**Ejemplo:**
+
+Tu programa calcula mal un total; pones un breakpoint antes del cálculo y descubres que una variable llegó en 0 en lugar de 100.
+
+Fuente:
+Sommerville, I. (2011). Ingeniería de software. España: Pearson Addison Wesley.
+
+---
+
+## 24. IDE
+
+Significa "entorno de desarrollo integrado" y es básicamente una caja de herramientas completa para programar: editor de texto, compilador o intérprete, depurador, autocompletado y hasta control de versiones, todo en una sola aplicación. La idea es que no tengas que andar saltando entre programas distintos.
+
+**Ejemplo:**
+
+Android Studio trae todo lo necesario para hacer, probar y depurar una app de Android sin salir del programa.
+
+Fuente:
+Sommerville, I. (2011). Ingeniería de software. España: Pearson Addison Wesley.
+
+---
+
+## 25. Editor de código
+
+Es más sencillo que un IDE: básicamente un bloc de notas mejorado, pensado para escribir código. Colorea la sintaxis para que se lea más fácil, te sugiere autocompletados y marca errores obvios, pero no trae compilador ni depurador integrados por defecto.
+
+**Ejemplo:**
+
+VS Code o Sublime Text; aunque VS Code con extensiones puede terminar pareciéndose bastante a un IDE.
+
+Fuente:
+Documentación oficial de Visual Studio Code.
+https://code.visualstudio.com/docs
+
+---
+
+
+## 26. Biblioteca (library)
+
+Es un conjunto de funciones y herramientas que alguien más ya programó, para que tú no tengas que reinventar la rueda. Tú decides cuándo y cómo usarla dentro de tu propio código: el control lo tienes tú, la biblioteca solo responde cuando la llamas.
+
+**Ejemplo:**
+
+Usas la librería math de Python para calcular una raíz cuadrada con math.sqrt() en vez de programar la fórmula tú mismo.
+
+Fuente:
+Documentación oficial de Python.
+https://docs.python.org/
+
+---
+
+## 27. Framework
+
+Se parece a una biblioteca, pero funciona al revés: en vez de que tú llames a sus funciones, es el framework el que define la estructura general del proyecto y llama a tu código en los momentos que él decide. Tú te acomodas a sus reglas y solo rellenas las partes que te toca.
+
+**Ejemplo:**
+
+React te obliga a organizar tu página en "componentes" y a seguir su forma de manejar el estado; tú no armas la estructura desde cero, la sigues.
+
+Fuente:
+Documentación oficial de React.
+https://react.dev/
+
+---
+
+## 28. API
+
+Son las reglas que definen cómo dos programas pueden comunicarse entre sí sin que uno tenga que saber cómo está hecho el otro por dentro. Es como el menú de un restaurante: pides algo específico y te lo entregan, sin necesidad de meterte a la cocina a ver cómo se preparó.
+
+**Ejemplo:**
+
+Tu app le pide el clima a la API de OpenWeather mandando una ciudad, y recibe de vuelta la temperatura en un formato como JSON.
+
+Fuente:
+MDN Web Docs.
+https://developer.mozilla.org/
+
+---
+
+Guardar y versionar
+## 29. Repositorio
+
+Es la carpeta de tu proyecto, pero con superpoderes: además de los archivos actuales, guarda todo el historial de cambios que ha tenido desde que empezaste. Puede estar en tu computadora (local) o subido a internet (remoto).
+
+**Ejemplo:**
+
+El repositorio de tu página web tiene el HTML, el CSS, el JavaScript, y también recuerda cómo se veían hace tres semanas.
+
+Fuente:
+Documentación oficial de Git.
+https://git-scm.com/doc
+
+---
+
+## 30. Control de versiones
+
+Es el sistema que se encarga de llevar ese historial: registra qué cambió, quién lo cambió y cuándo, y te permite regresar a una versión anterior si algo se rompió. Piénsalo como un "deshacer" gigante que funciona incluso días o semanas después.
+
+**Ejemplo:**
+
+Metes un cambio que tira el botón de login y, en vez de entrar en pánico, regresas el proyecto a como estaba el día anterior.
+
+Fuente:
+Piattini, M. G. (2017). Calidad de sistemas informáticos. México: Alfaomega.
+
+---
+
+## 31. Git
+
+Es el sistema de control de versiones más usado en el mundo. Corre en tu propia computadora, así que no necesitas internet para llevar el historial de tu proyecto; internet solo hace falta si quieres compartirlo o respaldarlo en otro lado.
+
+**Ejemplo:**
+
+Después de terminar una función, escribes:
+```
+git commit -m "arreglo del login"
+```
+para guardar ese avance con su explicación.
+
+Fuente:
+Documentación oficial de Git.
+https://git-scm.com/doc
+
+## 32. GitHub
+
+Es una plataforma en internet donde subes tus repositorios de Git para tenerlos respaldados en la nube y poder trabajar en equipo con otras personas. Ojo: Git es la herramienta que usas en tu compu, GitHub es el sitio web donde la guardas y compartes.
+
+**Ejemplo:**
+
+Subes tu proyecto escolar a GitHub y le mandas el link a tu compañero para que lo descargue y te ayude a programar.
+
+Fuente:
+GitHub Docs.
+https://docs.github.com/
+
+## 33. Rama (branch)
+
+Es una copia paralela de tu proyecto que te deja experimentar o desarrollar algo nuevo sin arriesgar la versión que ya funciona bien. Cuando terminas de probar y todo sale bien, puedes juntar esa rama con la principal.
+
+**Ejemplo:**
+
+Creas una rama llamada modo-oscuro para trabajar ese detalle, mientras la rama principal del proyecto sigue intacta y funcionando.
+
+Fuente:
+Documentación oficial de Git.
+https://git-scm.com/doc
+
+---
+
+## 34. Commit
+
+Es básicamente una "foto" de tu proyecto en un momento específico, acompañada de un mensaje corto que explica qué se hizo en ese cambio. Entre más claros sean tus mensajes de commit, más fácil es entender después qué pasó en el proyecto.
+
+**Ejemplo:**
+
+Haces un commit con el mensaje "agregué el botón de registro" justo después de terminar esa parte.
+
+Fuente:
+Documentación oficial de Git.
+https://git-scm.com/doc
+
+---
+
+## 35. Merge
+
+Es el proceso de unir dos ramas para juntar el trabajo que se hizo por separado en cada una. La mayoría de las veces se junta sin problema, pero si dos personas cambiaron la misma línea de código, aparece un "conflicto" que hay que resolver a mano, decidiendo qué versión se queda.
+
+**Ejemplo:**
+
+Terminas de trabajar en la rama modo-oscuro y la fusionas (merge) con la rama principal para que ese cambio quede incluido en el proyecto final.
+
+Fuente:
+GitHub Docs.
+https://docs.github.com/
+
+---
+
+Cómo se ejecuta el código
+## 36. Callback
+
+Es una función que le pasas como argumento a otra función, para que esta la ejecute después, normalmente cuando termine algo o cuando ocurra un evento. Es una forma de decirle al programa "cuando pase esto, entonces haz aquello".
+
+**Ejemplo:**
+
+boton.addEventListener("click", saludar)
+
+La función saludar no se ejecuta de inmediato, sino hasta que alguien realmente hace clic en el botón.
+
+Fuente:
+MDN Web Docs.
+https://developer.mozilla.org/
+
+---
+
+## 37. Programación síncrona
+
+Es cuando las instrucciones se ejecutan una tras otra, en orden, y ninguna tarea empieza hasta que la anterior haya terminado por completo. Si una tarea tarda mucho (como descargar un archivo grande), todo el programa se queda esperando y no puede hacer nada más mientras tanto.
+
+**Ejemplo:**
+
+El programa se congela por completo mientras espera a que termine de descargar un archivo pesado de internet.
+
+Fuente:
+MDN Web Docs.
+https://developer.mozilla.org/
+
+---
+
+## 38. Programación asíncrona
+
+Aquí, en cambio, cuando una tarea va a tardar, el programa la manda a hacer "en segundo plano" y sigue ejecutando otras cosas mientras tanto; cuando la tarea tardada por fin termina, el programa se entera y reacciona (muchas veces usando un callback). Esto evita que la aplicación se quede congelada esperando.
+
+**Ejemplo:**
+
+Una app de fotos sigue dejándote hacer scroll mientras, al mismo tiempo, va cargando imágenes desde internet en segundo plano.
+
+Fuente:
+MDN Web Docs.
+https://developer.mozilla.org/
+
+---
+
+Lenguajes
+## 39. JavaScript
+
+Es un lenguaje de programación interpretado que originalmente se creó para darle interactividad a las páginas web: animaciones, validaciones de formularios, botones que reaccionan al hacer clic, etc. Con el tiempo también se empezó a usar fuera del navegador, por ejemplo en servidores, gracias a herramientas como Node.js.
+
+**Ejemplo:**
+
+Validar con JavaScript que un usuario haya escrito bien su correo antes de dejarlo enviar un formulario.
+
+Fuente:
+MDN Web Docs. (2026). JavaScript. Mozilla.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+---
+
+## 40. TypeScript
+
+Es básicamente JavaScript, pero con una capa extra que obliga (o al menos permite) especificar qué tipo de dato es cada variable: número, texto, booleano, etc. Esto ayuda a detectar errores desde que estás escribiendo el código, antes de siquiera ejecutarlo. Al final, el código en TypeScript se convierte ("se compila") a JavaScript normal para poder correr.
+
+**Ejemplo:**
+```
+let edad: number = 18;
+```
+Si más adelante intentas meterle el texto "dieciocho", TypeScript te marca el error de inmediato, sin esperar a que el programa falle en producción.
+
+Fuente:
+Documentación oficial de TypeScript.
+https://www.typescriptlang.org/
+
+---
