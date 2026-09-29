@@ -303,9 +303,10 @@ let alumno = {
 ```
 El objeto alumno reúne información relacionada con una misma persona.
 
-Fuente:
+Fuente
 MDN Web Docs. (2026). Working with objects. Mozilla.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects
+
 ---
 
 ## 19. Método
